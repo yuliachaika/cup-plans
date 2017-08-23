@@ -1,0 +1,56 @@
+@mixin box-sizing($box) {
+  -webkit-box-sizing: $box; 
+     -moz-box-sizing: $box; 
+          box-sizing: $box;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify; 
+ 	justify-content: $justify;
+}
+@mixin align-items($items) {
+	-webkit-align-items: $items; 
+    	align-items: $items; 
+}
+@mixin align-self($self) {
+	-webkit-align-self: $self; 
+    	align-self: $self; 
+}
+
+@mixin text() {
+	font: $font-text;
+	color: $price-color; //$$$
+	line-height: 74px;
+}
+@mixin title() {
+	font: $font-title;
+	color: $text-color; //$$$
+	line-height: 56px;
+}
+@mixin subtitle() {
+	font: $font-subtitle;
+	color: $text-color; //$$$
+	line-height: 22px;
+	text-align: center;
+}
+
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
